@@ -1,225 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@1,300&family=Updock&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="contact.css" />
-    <title>Photo Album</title>
-  </head>
-  <body class="container">
-    <div class="sidebar">
-      <h1 class="heading">
-        <a href="index.html" class="heading__link">Camera Pointers</a>
-      </h1>
 
-      <nav class="sidebar__nav">
-        <ul class="sidebar__nav--list">
-          <li class="sidebar__nav--item">
-            <a href="index.html" class="sidebar__nav--link">Introduction</a>
-          </li>
-          <li class="sidebar__nav--item">
-            <a href="weddings.html" class="sidebar__nav--link">Weddings</a>
-          </li>
-          <li class="sidebar__nav--item">
-            <a href="#" class="sidebar__nav--link">Engagements</a>
-          </li>
-          <li class="sidebar__nav--item">
-            <a href="portrait.html" class="sidebar__nav--link">Portraits</a>
-          </li>
-          <li class="sidebar__nav--item">
-            <a href="#" class="sidebar__nav--link">Journal</a>
-          </li>
-          <li class="sidebar__nav--item">
-            <a href="#" class="sidebar__nav--link">Shop</a>
-          </li>
-          <li class="sidebar__nav--item">
-            <a href="#" class="sidebar__nav--link">Contact</a>
-          </li>
-        </ul>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@1,300&family=Updock&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="contact.css" />
+  <title>Camera Pointers | Capture Your Imagination</title>
+</head>
 
-      <nav class="sidebar__social">
-        <ul class="sidebar__social--list">
-          <li class="sidebar__social--item">
-            <a href="" class="sidebar__social--link">
-              <p>Facebook</p>
-              <span class="sidebar__social--span">
-                <svg class="sidebar__social--icon">
-                  <use xlink:href="img/sprite2.svg#icon-facebook2"></use>
-                </svg> </span
-            ></a>
-          </li>
+<body class="container">
 
-          <li class="sidebar__social--item">
-            <a href="" class="sidebar__social--link">
-              <p>Instagram</p>
-              <span class="sidebar__social--span">
-                <svg class="sidebar__social--icon">
-                  <use xlink:href="img/sprite2.svg#icon-instagram"></use>
-                </svg> </span
-            ></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+  <!-- Mobile Navigation -->
+  <div class="mobile-navigation">
+    <input type="checkbox" id="navigation-toggle" class="mobile-navigation__checkbox">
 
-    <main class="main-content">
-      <section class="about">
-        <h1 class="about__heading">About</h1>
-        <div class="about__frame-1">
-          <figure class="about__frame-1--fig">
-            <img
-              src="img/contact-img.jpg"
-              alt="Owner Image"
-              class="about__frame-1--img"
-            />
-          </figure>
-        </div>
-        <div class="about__frame-2">
-          <p class="about__text about__frame-2--text-1">
-            I approach photography with a romantic, fine art sensibility. My
-            imagery is understated yet evocative, resulting from clear and
-            polished creative direction that elicits light-filled, painterly
-            portraits. My use of fresh and simple composition, and natural light
-            has evolved from a deep love and respect for the old masters -
-            Rembrandt, Vermeer, Botticelli. I am a fiercely dedicated medium
-            format film photographer and my creative process is imaginative,
-            industrious and detailed. In each capture, I aim for perfection and
-            beauty.
-          </p>
-          <p class="about__text about__frame-2--text-2">
-            Over the last ten years, my work has taken me to spectacular
-            celebrations and sophisticated soirees in over twenty countries on
-            six different continents. Past clients have included prominent
-            global leaders, celebrated directors and actors, and distinguished
-            executives. I have been named one of the top 25 film photographers
-            in the world and a “photographer’s photographer” by Martha Stewart
-            Weddings. My work has been featured in numerous international
-            publications, including Rangefinder, Elle, Harper’s Bazaar, Town &
-            Country Weddings, Brides Magazine, The Knot, Martha Stewart
-            Magazine, The Boston Globe and New York Magazine. My clients
-            describe my work as “painterly,” “nuanced,” “refined” and I am
-            honored to be a leading choice amongst internationally acclaimed
-            planners and designers.
-          </p>
-        </div>
-        <figure class="about__frame-3">
-          <img
-            src="img/contact-img-2.jpg"
-            alt="Model Image"
-            class="about__frame-3--img"
-          />
+    <label for="navigation-toggle" class="mobile-navigation__button">
+      <span class="mobile-navigation__icon">&nbsp;</span>
+    </label>
+
+    <div class="mobile-navigation__background">&nbsp;</div>
+    <nav class="mobile-navigation__nav">
+      <ul class="mobile-navigation__nav--list">
+        <li class="mobile-navigation__nav--item">
+          <a href="index.html" class="mobile-navigation__nav--link">Introduction</a>
+        </li>
+        <li class="mobile-navigation__nav--item">
+          <a href="weddings.html" class="mobile-navigation__nav--link">Weddings</a>
+        </li>
+        <li class="mobile-navigation__nav--item">
+          <a href="#" class="mobile-navigation__nav--link">Engagements</a>
+        </li>
+        <li class="mobile-navigation__nav--item">
+          <a href="portrait.html" class="mobile-navigation__nav--link">Portraits</a>
+        </li>
+        <li class="mobile-navigation__nav--item">
+          <a href="#" class="mobile-navigation__nav--link">Journal</a>
+        </li>
+        <li class="mobile-navigation__nav--item">
+          <a href="#" class="mobile-navigation__nav--link">Shop</a>
+        </li>
+        <li class="mobile-navigation__nav--item">
+          <a href="#" class="mobile-navigation__nav--link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Side Bar -->
+  <div class="sidebar">
+    <h1 class="heading">
+      <a href="index.html" class="heading__link">Camera Pointers</a>
+    </h1>
+
+    <nav class="sidebar__nav">
+      <ul class="sidebar__nav--list">
+        <li class="sidebar__nav--item">
+          <a href="index.html" class="sidebar__nav--link">Introduction</a>
+        </li>
+        <li class="sidebar__nav--item">
+          <a href="weddings.html" class="sidebar__nav--link">Weddings</a>
+        </li>
+        <li class="sidebar__nav--item">
+          <a href="#" class="sidebar__nav--link">Engagements</a>
+        </li>
+        <li class="sidebar__nav--item">
+          <a href="portrait.html" class="sidebar__nav--link">Portraits</a>
+        </li>
+        <li class="sidebar__nav--item">
+          <a href="#" class="sidebar__nav--link">Journal</a>
+        </li>
+        <li class="sidebar__nav--item">
+          <a href="#" class="sidebar__nav--link">Shop</a>
+        </li>
+        <li class="sidebar__nav--item">
+          <a href="#" class="sidebar__nav--link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="sidebar__social">
+      <ul class="sidebar__social--list">
+        <li class="sidebar__social--item">
+          <a href="" class="sidebar__social--link">
+            <p>Facebook</p>
+            <span class="sidebar__social--span">
+              <svg class="sidebar__social--icon">
+                <use xlink:href="img/sprite2.svg#icon-facebook2"></use>
+              </svg> </span>
+          </a>
+        </li>
+
+        <li class="sidebar__social--item">
+          <a href="" class="sidebar__social--link">
+            <p>Instagram</p>
+            <span class="sidebar__social--span">
+              <svg class="sidebar__social--icon">
+                <use xlink:href="img/sprite2.svg#icon-instagram"></use>
+              </svg> </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <main class="main-content">
+    <section class="about">
+      <h1 class="about__heading">About</h1>
+      <div class="about__frame-1">
+        <figure class="about__frame-1--fig">
+
+          <img srcset="img/contact-img__small.jpg 150w, img/contact-img.jpg 300w"
+            sizes="(max-width: 1031px) 17.7vw, (max-width: 937px) 22.8vw, (max-width:712px) 83vw, 270px"
+            alt="Owner Image" class="about__frame-1--img" src="img/contact-img.jpg">
+
+          <!-- <img src="img/contact-img.jpg" alt="Owner Image" class="about__frame-1--img" /> -->
         </figure>
-        <div class="about__frame-4">
-          <p class="about__text about__frame-4--text-1">
-            I also have an active role in educating photographers on the art and
-            craft of shooting film. My written works include “The Master Guide
-            to Fine Art Wedding Photography,” now in its third edition, “<a
-              href=""
-              class="link-text"
-              >The Portraiture Reference Guides</a
-            >,” a 3 book series on natural and expressive portraiture and
-            composition, and The Focused Guides, a series for advanced
-            instruction and methodology. Upcoming conference appearances can be
-            found on my <a href="" class="link-text">press page</a>.
-          </p>
-          <p class="about__text about__frame-4--text-2">
-            I am a former New Yorker living in
-            <a href="#" class="link-text">Montecito</a>, California with my
-            husband and two rambunctious little boys.
-          </p>
-        </div>
-        <figure class="about__frame-5">
-          <img
-            src="img/contact-img-3.jpg"
-            alt="Family Photo"
-            class="about__frame-5--img"
-          />
-        </figure>
-        <div class="about__frame-6">
-          <div class="about__frame--empty">&nbsp;</div>
-        </div>
-      </section>
+      </div>
+      <div class="about__frame-2">
+        <p class="about__text about__frame-2--text-1">
+          I approach photography with a romantic, fine art sensibility. My
+          imagery is understated yet evocative, resulting from clear and
+          polished creative direction that elicits light-filled, painterly
+          portraits. My use of fresh and simple composition, and natural light
+          has evolved from a deep love and respect for the old masters -
+          Rembrandt, Vermeer, Botticelli. I am a fiercely dedicated medium
+          format film photographer and my creative process is imaginative,
+          industrious and detailed. In each capture, I aim for perfection and
+          beauty.
+        </p>
+        <p class="about__text about__frame-2--text-2">
+          Over the last ten years, my work has taken me to spectacular
+          celebrations and sophisticated soirees in over twenty countries on
+          six different continents. Past clients have included prominent
+          global leaders, celebrated directors and actors, and distinguished
+          executives. I have been named one of the top 25 film photographers
+          in the world and a “photographer’s photographer” by Martha Stewart
+          Weddings. My work has been featured in numerous international
+          publications, including Rangefinder, Elle, Harper’s Bazaar, Town &
+          Country Weddings, Brides Magazine, The Knot, Martha Stewart
+          Magazine, The Boston Globe and New York Magazine. My clients
+          describe my work as “painterly,” “nuanced,” “refined” and I am
+          honored to be a leading choice amongst internationally acclaimed
+          planners and designers.
+        </p>
+      </div>
+      <figure class="about__frame-3">
 
-      <section class="inquire">
-        <div class="inquire__frame">
-          <h1 class="inquire__heading">Inquire</h1>
-          <p class="inquire__text inquire__text-1">
-            We are available for bookings worldwide. For more information on
-            rates and availability, please send an email to
-            info@camerapointers.com or complete the form below.
-          </p>
-          <p class="inquire__text inquire__text-2">
-            PO BOX 5241
-            <br />
-            Montecito, CA 93108
-          </p>
-        </div>
+        <img srcset="img/contact-img-2__small.jpg 300w, img/contact-img-2.jpg 500w"
+          sizes="(max-width: 1031px) 37vw, (max-width: 937px) 48vw, (max-width: 712px) 47.2vw, 377px" alt="Model Image"
+          class="about__frame-3--img" src="img/contact-img-2.jpg">
 
-        <div class="inquire__platform">
-          <form action="#" class="inquire__form">
-            <div class="info__box">
-              <label for="name" class="info__label">Your Name</label>
-              <input type="text" id="name" class="info__input" />
-            </div>
-            <div class="info__box">
-              <label for="email" class="info__label">Your Email</label>
-              <input type="email" id="email" class="info__input" />
-            </div>
-            <div class="info__box">
-              <label for="confirm-email" class="info__label"
-                >Your Email Again</label
-              >
-              <input type="email" id="confirm-email" class="info__input" />
-            </div>
-            <div class="info__box">
-              <label for="number" class="info__label">Your Phone Number</label>
-              <input type="number" id="number" class="info__input" />
-            </div>
-            <div class="info__box">
-              <label for="date" class="info__label">Date Desired</label>
-              <input type="text" id="date" class="info__input" />
-            </div>
-            <div class="info__box">
-              <label for="location" class="info__label"
-                >Location or Venue Desired</label
-              >
-              <input type="text" id="location" class="info__input" />
-            </div>
-            <div class="info__box">
-              <label for="planner" class="info__label"
-                >Your Planner or Designer</label
-              >
-              <input type="text" id="planner" class="info__input" />
-            </div>
-            <div class="info__box">
-              <label for="message" class="info__label">Message</label>
-              <textarea
-                name="message"
-                id="message"
-                class="info__message"
-                cols="30"
-                rows="5"
-              ></textarea>
-            </div>
-            <div class="info__box">
-              <label for="referrer" class="info__label"
-                >How did you hear about me?</label
-              >
-              <input type="text" id="referrer" class="info__input" />
-            </div>
-          </form>
+        <!-- <img src="img/contact-img-2.jpg" alt="Model Image" class="about__frame-3--img" /> -->
+      </figure>
+      <div class="about__frame-4">
+        <p class="about__text about__frame-4--text-1">
+          I also have an active role in educating photographers on the art and
+          craft of shooting film. My written works include “The Master Guide
+          to Fine Art Wedding Photography,” now in its third edition, “<a href="" class="link-text">The Portraiture
+            Reference Guides</a>,” a 3 book series on natural and expressive portraiture and
+          composition, and The Focused Guides, a series for advanced
+          instruction and methodology. Upcoming conference appearances can be
+          found on my <a href="" class="link-text">press page</a>.
+        </p>
+        <p class="about__text about__frame-4--text-2">
+          I am a former New Yorker living in
+          <a href="#" class="link-text">Montecito</a>, California with my
+          husband and two rambunctious little boys.
+        </p>
+      </div>
+      <figure class="about__frame-5">
 
-          <input type="submit" class="info__submit" />
-        </div>
-      </section>
-    </main>
-  </body>
+        <img srcset="img/contact-img-3__small.jpg 300w, img/contact-img-3.jpg 500w"
+          sizes="(max-width: 1031px) 37vw, (max-width: 937px) 48vw, (max-width: 712px) 47.2vw, 377px" alt="Family Photo"
+          class="about__frame-5--img" src="img/contact-img-3.jpg">
+
+        <!-- <img src="img/contact-img-3.jpg" alt="Family Photo" class="about__frame-5--img" /> -->
+      </figure>
+      <div class="about__frame-6">
+        <div class="about__frame--empty">&nbsp;</div>
+      </div>
+    </section>
+
+    <section class="inquire">
+      <div class="inquire__frame">
+        <h1 class="inquire__heading">Inquire</h1>
+        <p class="inquire__text inquire__text-1">
+          We are available for bookings worldwide. For more information on
+          rates and availability, please send an email to
+          info@camerapointers.com or complete the form below.
+        </p>
+        <p class="inquire__text inquire__text-2">
+          PO BOX 5241
+          <br />
+          Montecito, CA 93108
+        </p>
+      </div>
+
+      <div class="inquire__platform">
+        <form action="#" class="inquire__form">
+          <div class="info__box">
+            <label for="name" class="info__label">Your Name</label>
+            <input type="text" id="name" class="info__input" />
+          </div>
+          <div class="info__box">
+            <label for="email" class="info__label">Your Email</label>
+            <input type="email" id="email" class="info__input" />
+          </div>
+          <div class="info__box">
+            <label for="confirm-email" class="info__label">Your Email Again</label>
+            <input type="email" id="confirm-email" class="info__input" />
+          </div>
+          <div class="info__box">
+            <label for="number" class="info__label">Your Phone Number</label>
+            <input type="number" id="number" class="info__input" />
+          </div>
+          <div class="info__box">
+            <label for="date" class="info__label">Date Desired</label>
+            <input type="text" id="date" class="info__input" />
+          </div>
+          <div class="info__box">
+            <label for="location" class="info__label">Location or Venue Desired</label>
+            <input type="text" id="location" class="info__input" />
+          </div>
+          <div class="info__box">
+            <label for="planner" class="info__label">Your Planner or Designer</label>
+            <input type="text" id="planner" class="info__input" />
+          </div>
+          <div class="info__box">
+            <label for="message" class="info__label">Message</label>
+            <textarea name="message" id="message" class="info__message" cols="30" rows="5"></textarea>
+          </div>
+          <div class="info__box">
+            <label for="referrer" class="info__label">How did you hear about me?</label>
+            <input type="text" id="referrer" class="info__input" />
+          </div>
+        </form>
+
+        <input type="submit" class="info__submit" />
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
