@@ -1,0 +1,24 @@
+{
+  "name": "gallery-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "prod": "parcel ./dist/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/classic-presh/Gallery.git"
+  },
+  "author": "Presh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/classic-presh/Gallery/issues"
+  },
+  "homepage": "https://github.com/classic-presh/Gallery#readme",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}

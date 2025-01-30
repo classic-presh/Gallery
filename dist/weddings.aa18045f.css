@@ -1,0 +1,519 @@
+:root {
+  --primary-color: #fff;
+  --font-color: #000;
+  --primary-font: "Crimson Text", sans-serif;
+  --secondary-font: "Libre Baskerville", sans-serif;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  font-family: var(--primary-font);
+}
+
+.container {
+  grid-template-rows: 55vw 50vw repeat(3, min-content);
+  grid-template-columns: [sidebar-start] minmax(min-content, 10vw)[sidebar-end main-start] repeat(8, [col-start] minmax(min-content, 1fr)[col-end])[main-end];
+  row-gap: .5rem;
+  display: grid;
+}
+
+.mobile-navigation {
+  display: none;
+  position: absolute;
+  top: -1rem;
+}
+
+.mobile-navigation__checkbox {
+  display: none;
+}
+
+.mobile-navigation__button {
+  z-index: 20;
+  text-align: center;
+  background: #e6ebeb;
+  border-radius: 15%;
+  width: 4rem;
+  height: 3.5rem;
+  position: fixed;
+  top: 2.9rem;
+  right: 5rem;
+}
+
+.mobile-navigation__button:hover {
+  cursor: pointer;
+}
+
+.mobile-navigation__background {
+  filter: progid: DXImageTransform. Microsoft. gradient(startColorstr= "#F8FAFA", endColorstr= "#D3D8E1", GradientType= 1);
+  z-index: 10;
+  background: -moz-radial-gradient(circle, #f9fbfbf2 0%, #d1d7e0f2 100%);
+  background: -webkit-radial-gradient(circle, #f9fbfbf2 0%, #d1d7e0f2 100%);
+  width: 0;
+  height: 100%;
+  margin-right: -1rem;
+  transition: all .5s;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.mobile-navigation__nav {
+  width: 22rem;
+  height: 100%;
+  opacity: hidden;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 15;
+  transition: opacity .7s;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.mobile-navigation__nav--list {
+  text-align: center;
+  list-style: none;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mobile-navigation__nav--item {
+  text-align: left;
+  padding: 1.5rem 0;
+}
+
+.mobile-navigation__nav--link {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+
+.mobile-navigation__nav--link:focus {
+  color: #566;
+}
+
+.mobile-navigation__checkbox:checked ~ .mobile-navigation__background {
+  width: 22rem;
+  margin-right: 0;
+}
+
+.mobile-navigation__checkbox:checked ~ .mobile-navigation__nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-navigation__icon {
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.mobile-navigation__icon, .mobile-navigation__icon:before, .mobile-navigation__icon:after {
+  background-color: #333;
+  width: 2.7rem;
+  height: 2px;
+  display: inline-block;
+  right: 0;
+}
+
+.mobile-navigation__icon:before, .mobile-navigation__icon:after {
+  content: "";
+  transition: all .2s;
+  position: absolute;
+}
+
+.mobile-navigation__icon:before {
+  top: -.8rem;
+}
+
+.mobile-navigation__icon:after {
+  top: .8rem;
+}
+
+.mobile-navigation__checkbox:checked + .mobile-navigation__button .mobile-navigation__icon {
+  background-color: #0000;
+}
+
+.mobile-navigation__checkbox:checked + .mobile-navigation__button .mobile-navigation__icon:before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.mobile-navigation__checkbox:checked + .mobile-navigation__button .mobile-navigation__icon:after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+.sidebar {
+  flex-direction: column;
+  grid-column: sidebar-start / sidebar-end;
+  justify-content: start;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 6.5rem 0;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar > * {
+  padding: 0 4rem;
+}
+
+.sidebar > :not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.heading {
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  align-self: center;
+  font-size: 3.4rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.heading__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sidebar__nav--list {
+  text-transform: uppercase;
+  letter-spacing: .14rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.23;
+  list-style: none;
+}
+
+.sidebar__nav--item {
+  padding: .4rem 0;
+}
+
+.sidebar__nav--link:link, .sidebar__nav--link:visited {
+  color: inherit;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.sidebar__nav--link:hover, .sidebar__nav--link:active {
+  color: #969696;
+}
+
+.sidebar__social {
+  width: 75%;
+  margin-top: auto;
+}
+
+.sidebar__social--list {
+  font-size: 1.4rem;
+  font-family: var(--secondary-font);
+  letter-spacing: .9px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6;
+  list-style: none;
+}
+
+.sidebar__social--link:link, .sidebar__social--link:visited {
+  color: inherit;
+  justify-content: start;
+  align-items: center;
+  padding: .4rem 0;
+  text-decoration: none;
+  transition: all .2s;
+  display: flex;
+}
+
+.sidebar__social--link:hover, .sidebar__social--link:active {
+  color: #969696;
+  fill: #969696;
+}
+
+.sidebar__social--span {
+  align-items: center;
+  margin-left: auto;
+  display: flex;
+}
+
+.sidebar__social--icon {
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+}
+
+.gallery-1 {
+  grid-column: main-start / main-end;
+  margin-top: 6.5rem;
+  padding-left: 2.5rem;
+  padding-right: 6.5rem;
+  display: flex;
+}
+
+.gallery-1__picture {
+  width: 50%;
+  overflow: hidden;
+}
+
+.gallery-1__img, .gallery-2__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.gallery-1__content {
+  width: 50%;
+}
+
+.gallery-1__content--description, .gallery-2__content--description {
+  background-color: #f6f4f4;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 15%;
+  display: flex;
+}
+
+.gallery-1__content--heading, .gallery-2__content--heading {
+  font-family: var(--primary-font);
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.gallery-1__content--location, .gallery-2__content--location {
+  font-family: var(--secondary-font);
+  letter-spacing: .05rem;
+  margin-top: 10%;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: .7;
+}
+
+.gallery-2 {
+  grid-column: main-start / main-end;
+  padding-left: 2.5rem;
+  padding-right: 6.5rem;
+  display: flex;
+}
+
+.gallery-2__picture {
+  width: 50%;
+  overflow: hidden;
+}
+
+.gallery-2__content {
+  text-align: right;
+  width: 50%;
+}
+
+.quote {
+  grid-column: main-start / main-end;
+  padding: 1.7rem 6.5rem 1.7rem 2.5rem;
+}
+
+.quote__text, .quote__reference {
+  font-size: 1.5rem;
+  font-family: var(--secondary-font);
+  letter-spacing: .06rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.quote__block--1 {
+  border-left: 1px solid #00000059;
+  padding-left: 1.8rem;
+}
+
+.quote__text {
+  margin: 1.8rem 0;
+}
+
+.quote__reference {
+  text-align: center;
+}
+
+.quote__reference--link {
+  color: #bc8f8f;
+  text-decoration: none;
+}
+
+.gallery-3 {
+  grid-column: main-start / main-end;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2.5rem;
+  padding: 2.5rem 6.5rem 2.5rem 2.5rem;
+  display: grid;
+}
+
+.gallery-3__img {
+  width: 100%;
+  height: 100%;
+}
+
+.wedding-collections {
+  grid-column: main-start / main-end;
+  grid-template-rows: repeat(8, 6vw);
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1rem;
+  padding: 1.5rem 6.5rem 6.5rem 2.5rem;
+  display: grid;
+}
+
+.wedding-collections__item--1 {
+  grid-area: 1 / 1 / span 2 / 2;
+}
+
+.wedding-collections__item--2 {
+  grid-area: 1 / 2 / span 4 / span 3;
+}
+
+.wedding-collections__item--3 {
+  grid-area: 3 / 1 / 5 / 2;
+}
+
+.wedding-collections__item--4 {
+  grid-area: 1 / 5 / span 2 / span 2;
+}
+
+.wedding-collections__item--5 {
+  grid-area: 1 / 7 / span 4 / -1;
+}
+
+.wedding-collections__item--6 {
+  z-index: 2;
+  grid-area: 3 / 5 / span 3 / 7;
+}
+
+.wedding-collections__item--7 {
+  grid-area: 5 / 1 / 9 / 4;
+}
+
+.wedding-collections__item--8 {
+  clip-path: polygon(34% 0, 100% 0, 100% 100%, 0 100%, 0 25.5%, 34% 25.5%);
+  grid-area: 5 / 6 / 9 / 9;
+}
+
+.wedding-collections__item--9 {
+  clip-path: polygon(100% 25.5%, 100% 100%, 0 100%, 0 0, 48.5% 0, 48.5% 25.5%);
+  grid-area: 5 / 4 / 9 / 6;
+}
+
+.wedding-collections__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media only screen and (width <= 78.125em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (width <= 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (width <= 62.5em) {
+  .container {
+    grid-template-rows: 8rem repeat(2, 65vw) repeat(3, min-content);
+    grid-template-columns: [main-start] repeat(8, [col-start] minmax(min-content, 1fr)[col-end])[main-end];
+    row-gap: 5px;
+    padding-bottom: 3rem;
+    padding-right: 2.5rem;
+    display: grid;
+  }
+
+  .sidebar {
+    grid-area: 1 / 1 / 2 / -1;
+    align-items: center;
+    height: auto;
+    padding-top: 1.5rem;
+    position: relative;
+  }
+
+  .sidebar > :not(:first-child) {
+    display: none;
+  }
+
+  .heading {
+    align-self: start;
+    font-size: 3rem;
+    padding: 1rem 2.5rem 0 !important;
+  }
+
+  .gallery-1 {
+    margin-top: 0;
+  }
+
+  .gallery-1, .gallery-2, .quote, .gallery-3, .wedding-collections {
+    padding-right: 0;
+  }
+
+  .gallery-1__content--heading, .gallery-2__content--heading {
+    letter-spacing: .5rem;
+    font-size: 2.8rem;
+  }
+
+  .gallery-1__content--location, .gallery-2__content--location {
+    font-size: 1.2rem;
+  }
+
+  .mobile-navigation {
+    display: block;
+  }
+}
+
+@media only screen and (width <= 33.6875em) {
+  .gallery-1 {
+    flex-direction: column;
+  }
+
+  .gallery-2 {
+    flex-direction: column-reverse;
+  }
+
+  .gallery-1__content, .gallery-1__picture, .gallery-2__content, .gallery-2__picture {
+    width: 100%;
+  }
+
+  .container {
+    grid-template-rows: 8rem repeat(2, min-content) repeat(3, min-content);
+  }
+
+  .gallery-1__content--heading, .gallery-2__content--heading {
+    letter-spacing: .5rem;
+    font-size: 2.6rem;
+  }
+}
+
+@media only screen and (width <= 30em) {
+  .heading {
+    letter-spacing: 0;
+    font-size: 2.5rem;
+    padding-top: 1.3rem !important;
+  }
+}
+/*# sourceMappingURL=weddings.aa18045f.css.map */
