@@ -2,7 +2,10 @@
   "name": "gallery-project",
   "version": "1.0.0",
   "description": "gallery",
-  "main": "index.js",
+  "default": "index.html",
+  "targets": {
+    "main": false
+  },
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
